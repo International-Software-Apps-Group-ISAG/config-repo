@@ -46,13 +46,25 @@ The Config Server pulls these configurations from this repository at runtime and
 ## 📂 Project Structure
 
 ```text
-config-server/
+config-repo/
 │
-├── application.yml          (global default)
-├── application-dev.yml      (global per environment)
-├── application-prod.yml     (global per environment)
-├── microservice-x.yml       (service-specific)
-├── microservice-x-dev.yml   (service & environment specific) (overrides global)
-├── microservice-x-prod.yml  (service & environment specific) (overrides global)
+├── common/
+│   ├── application.yml
+│   ├── application-dev.yml
+│   ├── application-test.yml
+│   └── application-prod.yml
+│
+├── service-registry/
+│   ├── service-registry.yml
+│   ├── service-registry-dev.yml
+│   ├── service-registry-test.yml
+│   └── service-registry-prod.yml
+│
+├── x-service/
+│   ├── x-service.yml
+│   ├── x-service-dev.yml
+│   ├── x-service-test.yml
+│   └── x-service-prod.yml
+│
 └── README.md
 ```
